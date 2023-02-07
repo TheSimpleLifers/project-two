@@ -15,7 +15,7 @@ Project.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    cuisine: {
       type: DataTypes.STRING,
     },
     date_created: {
@@ -23,7 +23,7 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    meals_available: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
