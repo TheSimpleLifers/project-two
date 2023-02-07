@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Restaurant } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newProject = await Project.create({
+    const newRestaurant = await Restaurant.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newProject);
+    res.status(200).json(newRestaurant);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,19 +17,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const projectData = await Project.destroy({
+    const restaurantData = await Restaurant.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+    if (!restaurantData) {
+      res.status(404).json({ message: 'No restaurant found with this id!' });
       return;
     }
 
-    res.status(200).json(projectData);
+    res.status(200).json(restaurantData);
   } catch (err) {
     res.status(500).json(err);
   }
