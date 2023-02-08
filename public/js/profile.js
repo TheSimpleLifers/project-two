@@ -1,11 +1,11 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#project-name').value.trim();
+  const name = document.querySelector('#restaurant-name').value.trim();
   const meals_available = document
-    .querySelector('#project-funding')
+    .querySelector('#meals-available')
     .value.trim();
-  const cuisine = document.querySelector('#project-desc').value.trim();
+  const cuisine = document.querySelector('#cuisine').value.trim();
   const lat = document.querySelector('#restaurant-lat').value.trim();
   const lon = document.querySelector('#restaurant-lon').value.trim();
 
@@ -43,9 +43,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-restaurant-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.restaurant-list')
   .addEventListener('click', delButtonHandler);
