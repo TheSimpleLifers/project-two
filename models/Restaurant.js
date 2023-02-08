@@ -27,6 +27,12 @@ Restaurant.init(
       type: DataTypes.FLOAT,
       allowNull: false,
     },
+    lat: {
+      type: DataTypes.DECIMAL(8, 6),
+    },
+    lon: {
+      type: DataTypes.DECIMAL(9, 6),
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
