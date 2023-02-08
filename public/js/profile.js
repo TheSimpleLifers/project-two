@@ -6,6 +6,8 @@ const newFormHandler = async (event) => {
     .querySelector('#project-funding')
     .value.trim();
   const cuisine = document.querySelector('#project-desc').value.trim();
+  const lat = document.querySelector('#restaurant-lat').value.trim();
+  const lon = document.querySelector('#restaurant-lon').value.trim();
 
   if (name && meals_available && cuisine) {
     const response = await fetch(`/api/restaurants`, {
