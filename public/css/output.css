@@ -555,20 +555,33 @@ video {
   display: flex;
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-col {
   flex-direction: column;
 }
 
-.items-center {
-  align-items: center;
+.content-center {
+  align-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.bg-\[\#d9e9e8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 233 232 / var(--tw-bg-opacity));
 }
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .text-red-500 {
