@@ -2,21 +2,57 @@
   {
     "name": "ZamZam",
     "cuisine": "Middle Eastern",
-    "meals_available": 10
+    "meals_available": 10,
+    "lat": "-25.50300",
+    "lon": "61.86620"
   },
   {
     "name": "Mixteco Grill",
     "cuisine": "Mexican",
-    "meals_available": 15
+    "meals_available": 15,
+    "lat": "-38.07422",
+    "lon": "-99.33414"
   },
   {
     "name": "90 Miles",
     "cuisine": "Cuban",
-    "meals_available": 25
+    "meals_available": 25,
+    "lat": "70.65854",
+    "lon": "-109.12680"
   },
   {
-    "name": "90 Miles",
-    "cuisine": "Cuban",
-    "meals_available": 25
+    "name": "Beatnik",
+    "cuisine": "Spanish",
+    "meals_available": 30,
+    "lat": "41.9090",
+    "lon": "87.8089"
+  },
+  {
+    "name": "Fatpour",
+    "cuisine": "American",
+    "meals_available": 18,
+    "lat": "41.908802",
+    "lon": "-87.679596"
+  },
+  {
+    "name": "Snakes & Lattes",
+    "cuisine": "American",
+    "meals_available": 23,
+    "lat": "6.33075",
+    "lon": "127.4144"
+  },
+  {
+    "name": "New Star",
+    "cuisine": "Chinese",
+    "meals_available": 27,
+    "lat": "49.61460",
+    "lon": "125.28236"
+  },
+  {
+    "name": "Danny G's Ristorante",
+    "cuisine": "Italian",
+    "meals_available": 32,
+    "lat": "41.9089",
+    "lon": "87.8129"
   }
 ]

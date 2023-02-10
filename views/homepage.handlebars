@@ -1,5 +1,9 @@
+<div id="latitude"></div>
+<div id="longitude"></div>
+
 <!-- Loop over each object in the projects array -->
 <div class="flex flex-wrap">
+{{restaurants.length}}
 {{#each restaurants as |restaurant| }}
 <div class="content-center max-w-sm p-8 m-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
   <div class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -17,8 +21,17 @@
     <p>
       {{restaurant.cuisine}}
     </p>
+    <p class="lat-{{@index}}" data-lat="{{restaurant.lat}}">
+      Latitude: {{restaurant.lat}}
+    </p>
+    <p class="lon-{{@index}}" data-lon="{{restaurant.lon}}">
+      Longitude: {{restaurant.lon}}
+    </p>
+    <p>Distance: <span class="distance-{{@index}}"></span> miles</p>
     <p>Created by {{restaurant.user.name}} on {{format_date restaurant.date_created}}</p>
   </div>
 </div>
 {{/each}}
 </div>
+
+<script src="./js/homepage.js"></script>

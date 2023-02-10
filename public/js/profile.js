@@ -9,10 +9,10 @@ const newFormHandler = async (event) => {
   const lat = document.querySelector('#restaurant-lat').value.trim();
   const lon = document.querySelector('#restaurant-lon').value.trim();
 
-  if (name && meals_available && cuisine) {
+  if (name && meals_available && cuisine && lat && lon) {
     const response = await fetch(`/api/restaurants`, {
       method: 'POST',
-      body: JSON.stringify({ name, meals_available, cuisine }),
+      body: JSON.stringify({ name, meals_available, cuisine, lat, lon }),
       headers: {
         'Content-Type': 'application/json',
       },
