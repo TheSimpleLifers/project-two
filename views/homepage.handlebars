@@ -1,19 +1,19 @@
 <!-- Loop over each object in the projects array -->
+<div class="flex flex-wrap">
 {{#each restaurants as |restaurant| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
+<div class="content-center max-w-sm p-8 m-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+  <div class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
       <a href="/restaurant/{{restaurant.id}}">{{restaurant.name}}</a>
     </h2>
-    <p>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount restaurant.meals_available}}</span>
-meals available!
-    </p>
+    
   </div>
-  <div class="col-md-7">
+  <div class="font-normal text-green-400">
+    <p class=""><span class="dollar-amount">{{format_amount restaurant.meals_available}}</span>&nbsp meals available!</p>
+  </div>
+  <div class="font-normal text-gray-700 dark:text-gray-400">
     <p>
       {{restaurant.cuisine}}
     </p>
@@ -21,3 +21,4 @@ meals available!
   </div>
 </div>
 {{/each}}
+</div>
