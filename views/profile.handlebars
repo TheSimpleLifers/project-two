@@ -1,36 +1,37 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <h2 class="pb-2 text-2xl font-extrabold text-[#184c4c] dark:text-white">Welcome, {{name}}!</h2>
   </div>
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Add a New Restaurant:</h3>
-
-    <form class="form new-restaurant-form">
+  <div class="grow w-full max-w-sm p-2 m-2 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <h3 class="text-center pb-4 text-2xl font-bold text-[#184c4c] dark:text-white">Add a New Restaurant</h3>
+    <form class="form new-restaurant-form space-y-4">
       <div class="form-group">
         <label for="restaurant-name">Restaurant Name:</label>
-        <input class="form-input" type="text" id="restaurant-name" name="restaurant-name" />
+        <input class="form-input block w-full p-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="text" id="restaurant-name" name="restaurant-name"/>
       </div>
       <div class="form-group">
         <label for="meals-available">Meals Available:</label>
-        <input class="form-input" type="number" id="meals-available" name="meals-available" />
+        <input class="form-input block w-full p-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="number" id="meals-available" name="meals-available" />
       </div>
       <div class="form-group">
         <label for="cuisine">Cuisine:</label>
-        <textarea class="form-input" id="cuisine" name="cuisine"></textarea>
+        <textarea class="form-input block w-full p-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="cuisine" name="cuisine"></textarea>
       </div>
       <div class="form-group">
         <label for="restaurant-lat">Latitude:</label>
-        <textarea class="form-input" id="restaurant-lat" name="restaurant-lat"></textarea>
+        <textarea class="form-input block w-full p-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="restaurant-lat" name="restaurant-lat"></textarea>
       </div>
       <div class="form-group">
         <label for="restaurant-lon">Longitude:</label>
-        <textarea class="form-input" id="restaurant-lon" name="restaurant-lon"></textarea>
+        <textarea class="form-input block w-full p-1 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="restaurant-lon" name="restaurant-lon"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Add Restaurant</button>
+        <button type="submit" class="btn btn-primary text-white bg-[#184c4c] hover:bg-[#406F6F] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 grow">Add Restaurant
+          <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
       </div>
     </form>
   </div>

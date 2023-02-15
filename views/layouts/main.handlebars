@@ -10,15 +10,15 @@
   <link rel="stylesheet" href="/css/output.css">
 </head>
 
-<body class="bg-[#d9e9e8]">
-  <div class="flex flex-col justify-around ">
-    <header class="flex justify-between content-center p-4">
+<body class="backdrop-blur-sm min-h-screen">
+  <div class="flex flex-col justify-around min-h-screen">
+    <header class="flex justify-between content-center p-4 border-b border-gray-200 bg-[#D4DFC7] ">
       <div class="flex-col">
         <h1 class="text-left">
           <a class="uppercase" href="/">Food Fun'd</a>
           <span role="img" aria-label="money">🥗</span>
         </h1>
-        <h3 >Save Money 🤑 Save Food 🍔 </h3>
+        <h3 >Save Meals 🍔 Save Money 🤑</h3>
       </div>
       <nav>
         <!-- Conditionally render login or logout links -->
@@ -30,7 +30,7 @@
         {{/if}}
       </nav>
     </header>
-    <main class="flex flex-col w-1-4 content-center items-center p-5 mt-2 bg-[#a8a8a8]">
+    <main class="flex flex-1 flex-col items-center w-1-4 content-center p-5 bg-gradient-to-tr from-[#184c4c] via-[#D4DFC7] to-[#184c4c]">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
