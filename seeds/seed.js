@@ -15,7 +15,7 @@ const seedDatabase = async () => {
   for (const restaurant of restaurantData) {
     await Restaurant.create({
       ...restaurant,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      // user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 
