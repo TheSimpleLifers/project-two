@@ -1,29 +1,36 @@
 <!-- Header section with current location + # of restaurants added -->
-<div class="grow w-full max-w-sm p-2 m-2 text-black bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-  <div>
-    <h2>Latitude:</h2>
-    <div id="latitude"></div>
+<div class="flex flex-row m-2">
+  <div class="text-center grow w-full max-w-sm p-1 m-0 text-black bg-white border border-gray-200 rounded-l-lg shadow sm:p-2 md:p-3">
+      <h2>There are {{restaurants.length}} restaurants to choose from!</h2>
   </div>
-  <div id="longitude"></div>
+  <div class="grow w-full max-w-sm p-1 m-0 text-black bg-white border border-gray-200 rounded-r-lg shadow sm:p-2 md:p-3">
+    <h2 class="text-center">Your location</h2>
+    <div class="flex flex-row justify-evenly">
+      <h2>Latitude: </h2>
+      <div id="latitude"></div>
+      <h2>Longitude: </h2>
+      <div id="longitude"></div>
+    </div>
+  </div>
 </div>
 {{!-- {{restaurants.length}} --}}
 
 <!-- Loop over each object in the projects array -->
-<div class="flex flex-wrap">
+<div class="flex flex-wrap justify-evenly">
 {{#each restaurants as |restaurant| }}
-<div class="content-center max-w-sm p-8 m-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-  <div class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-    <h2>
+<div class="grow content-center max-w-sm p-6 m-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+  <div class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+    <h2 class="text-[#184c4c]">
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
       <a href="/restaurant/{{restaurant.id}}">{{restaurant.name}}</a>
     </h2>
     
   </div>
-  <div class="font-normal text-green-400">
-    <p class=""><span class="dollar-amount">{{format_amount restaurant.meals_available}}</span>&nbsp meals available!</p>
+  <div class="font-bold text-[#46ada1]">
+    <p class=""><span class="dollar-amount">{{format_amount restaurant.meals_available}}</span>&nbspmeals available!</p>
   </div>
-  <div class="font-normal text-gray-700 dark:text-gray-400">
+  <div class="font-normal text-gray-700">
     <p>
       {{restaurant.cuisine}}
     </p>
