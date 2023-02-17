@@ -7,7 +7,7 @@ navigator.geolocation.getCurrentPosition((position) => {
 
   latText.innerText = lat.toFixed(2);
   longText.innerText = long.toFixed(2);
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 1000; i++) {
     let reslat = document.querySelector(`.lat-${i}`).getAttribute('data-lat');
     let reslon = document.querySelector(`.lon-${i}`).getAttribute('data-lon');
     // alert(calcCrow(lat, long, reslat, reslon).toFixed(1));
