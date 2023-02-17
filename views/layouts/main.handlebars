@@ -18,20 +18,24 @@
           <a class="uppercase text-transparent bg-clip-text bg-gradient-to-r from-[#184c4c] via-[#96c0b7] to-[#184c4c]" href="/">Food Fun'd</a>
           <span role="img" aria-label="salad">🥗</span>
         </h1>
-        <h3>Save Meals 🍔 Save Money 🤑</h3>
       </div>
-      <nav>
+      <nav class="m-2">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/profile">Profile</a> |
+        <button class="no-button" id="logout">Log Out</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Log In</a>
         {{/if}}
       </nav>
     </header>
-    <main class="flex flex-1 flex-col items-center w-1-4 content-center p-5 bg-gradient-to-tr from-[#184c4c] via-[#D4DFC7] to-[#184c4c] relative">
+
+    <main class="flex flex-1 flex-col items-center w-1-4 content-center p-5 bg-gradient-to-t from-[#D4DFC7] to-[#184c4c] relative">
       <!-- Render the sub layout -->
+      <div class="backdrop-blur-lg text-center pb-2 text-white">
+        <h3 class="font-bold">Save Meals 🍔 Save Money 🤑</h3>
+        <p>Discover a restaurant with Surprise Boxes of fresh food near you and grab one before it goes to waste.</p>
+      </div>
       {{{ body }}}
     </main>
     <footer>

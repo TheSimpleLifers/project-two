@@ -1,11 +1,13 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
+<div class="flex flex-col items-center w-full max-w-sm p-2 m-2 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8">
+  <div class="flex">
+    <h2 class="pb-2 text-2xl font-extrabold text-[#184c4c]">{{name}}</h2>
+    <p>{{{get_emoji}}}</p>
+  </div>
   <p>{{cuisine}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <p>
     <span for="img" aria-label="pasta">🍝</span>
     <span class="dollar-amount">{{format_amount meals_available}}</span>
-    surprise boxes available!
+    Surprise Boxes available!
   </p>
 </div>

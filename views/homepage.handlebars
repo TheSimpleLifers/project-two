@@ -1,13 +1,13 @@
 <!-- Header section with current location + # of restaurants added -->
-<div class="flex flex-row m-2">
-  <div class="text-center grow w-full max-w-sm p-1 m-0 text-black bg-white border border-gray-200 rounded-l-lg shadow sm:p-2 md:p-3">
-      <h2>There are {{restaurants.length}} restaurants to choose from!</h2>
+<div class="flex flex-col m-2 sm:flex-row bg-white rounded-lg shadow">
+  <div class="text-center grow w-full max-w-sm p-1 m-0 text-black sm:p-2 md:p-3">
+      <h2>There are {{restaurants.length}} restaurants <br> to choose from!</h2>
   </div>
-  <div class="grow w-full max-w-sm p-1 m-0 text-black bg-white border border-gray-200 rounded-r-lg shadow sm:p-2 md:p-3">
+  <div class="grow w-full max-w-sm p-1 m-0 text-black sm:border-l border-gray-200 sm:p-2 md:p-3">
     <h2 class="text-center">Your location</h2>
     <div class="flex flex-row justify-evenly">
       <h2>Latitude: </h2>
-      <div id="latitude"></div>
+      <div class="pr-2" id="latitude"></div>
       <h2>Longitude: </h2>
       <div id="longitude"></div>
     </div>
@@ -18,7 +18,7 @@
 <!-- Loop over each object in the projects array -->
 <div class="flex flex-wrap justify-evenly">
 {{#each restaurants as |restaurant| }}
-<div class="grow content-center max-w-sm p-6 m-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+<div class="content-center md:w-96 p-6 m-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 w-full">
   <div class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
     <h2 class="text-[#184c4c]">
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
@@ -28,7 +28,7 @@
     
   </div>
   <div class="font-bold text-[#46ada1]">
-    <p class=""><span class="dollar-amount">{{format_amount restaurant.meals_available}}</span>&nbspsurprise boxes available!</p>
+    <p class=""><span class="dollar-amount">{{format_amount restaurant.meals_available}}</span>&nbspSurprise Boxes available!</p>
   </div>
   <div class="font-normal text-gray-700">
     <p>
